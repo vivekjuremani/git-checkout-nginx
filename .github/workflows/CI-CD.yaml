@@ -14,9 +14,9 @@ jobs :
       - name : "checkout to repo"
         uses :  actions/checkout@v4
       - name : "setup nodejs"
-        uses :   actions/setup-nodejs@v4
+        uses :   actions/setup-node@v4
       - name : "install dependency"
-        run  :  npm install --legacy--peer-deps
+        run  :  npm install --legacy-peer-deps
       - name :  "npm run  db:gnerate"
         run  :  npm run db:generate
       - name :  "build"
