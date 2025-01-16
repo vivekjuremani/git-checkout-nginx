@@ -12,9 +12,9 @@ jobs :
     runs-on : "ubuntu-latest"
     steps :
       - name : "checkout to repo"
-        uses :  action/checkout@v4
+        uses :  actions/checkout@v4
       - name : "setup nodejs"
-        uses :   action/setup-nodejs@v4
+        uses :   actions/setup-nodejs@v4
       - name : "install dependency"
         run  :  npm install --legacy--peer-deps
       - name :  "install db gnerate"
