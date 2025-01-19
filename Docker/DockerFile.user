@@ -6,12 +6,12 @@ COPY  package.json package-lock.json turbo.json tsconfig.json ./
 
 RUN npm install
 
-COPY  apps/  ./apps
+COPY  apps  ./apps
 
-COPY  packages/  ./packages
+COPY  packages  ./packages
 
 RUN npm run db:generate
 
-RUN  npm run build
+# RUN  npm run build
 
 CMD ["npm" , "run" , "start-user-app"]
