@@ -5,11 +5,11 @@ WORKDIR /src/app
 COPY  package*.json  turbo.json tsconfig.json ./
 
 
-RUN npm install --verbose
-
 COPY  apps  ./apps
 
 COPY  packages  ./packages
+
+RUN npm install --verbose
 
 RUN npm run db:generate
 
