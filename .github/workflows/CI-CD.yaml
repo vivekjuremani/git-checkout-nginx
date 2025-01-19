@@ -1,23 +1,23 @@
-name : checking es-linting and checking user-app
+# name : checking es-linting and checking user-app
 
-on :
-  push :
-    branches :
-      - "master"
-  pull_request : 
-    branches : 
-      - master
-jobs :
-  build :
-    runs-on : "ubuntu-latest"
-    steps :
-      - name : "checkout to repo"
-        uses :  action/checkout@v4
-      - name : "setup nodejs"
-        uses :   action/setup-nodejs@v4
-      - name : "install dependency"
-        run  :  npm install --legacy--peer-deps
-      - name :  "install db gnerate"
-        run  :  npm run db:generate
-      - name :  "build"
-        run  : "npm run build"
+# on :
+#   push :
+#     branches :
+#       - "master"
+#   pull_request : 
+#     branches : 
+#       - master
+# jobs :
+#   build :
+#     runs-on : "ubuntu-latest"
+#     steps :
+#       - name : "checkout to repo"
+#         uses :  actions/checkout@v4
+#       - name : "setup nodejs"
+#         uses :   actions/setup-node@v4
+#       - name : "install dependency"
+#         run  :  npm install --legacy-peer-deps
+#       - name :  "npm run  db:gnerate"
+#         run  :  npm run db:generate
+#       - name :  "build"
+#         run  : "npm run build"
